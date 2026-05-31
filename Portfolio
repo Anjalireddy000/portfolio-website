@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Portfolio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(-45deg,#0f172a,#1e3a8a,#7c3aed,#06b6d4);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+    color:white;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.3);
+    backdrop-filter:blur(10px);
+    padding:15px 50px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:yellow;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.3);
+}
+
+.hero img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:5px solid white;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero p{
+    margin-top:10px;
+    font-size:20px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:white;
+    color:#1e3a8a;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.education-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.education-table th,
+.education-table td{
+    border:1px solid rgba(255,255,255,0.3);
+    padding:15px;
+    text-align:center;
+}
+
+.education-table th{
+    background:rgba(255,255,255,0.2);
+}
+
+.skill{
+    margin:20px 0;
+}
+
+.skill-name{
+    margin-bottom:8px;
+}
+
+.skill-bar{
+    width:100%;
+    background:#ddd;
+    border-radius:20px;
+}
+
+.skill-fill{
+    height:20px;
+    border-radius:20px;
+    background:linear-gradient(to right,#00f5ff,#00ff84);
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:rgba(255,255,255,0.12);
+    padding:25px;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+input,textarea,select{
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+}
+
+button{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#00f5ff;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:rgba(0,0,0,0.4);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:35px;
+}
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    margin-top:10px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">Portfolio</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+
+<div class="hero-card">
+
+<img src="https://via.placeholder.com/180" alt="Profile">
+
+<h1>Chamala Anjali Reddy</h1>
+
+<p>B.Tech Student | Java Developer | Web Developer</p>
+
+<a href="#contact" class="btn">Hire Me</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+
+<p>
+I am a passionate B.Tech student interested in Web Development,
+Java Programming, Software Engineering and Cloud Technologies.
+I enjoy building innovative projects and participating in hackathons.
+</p>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<h2 class="section-title">Education</h2>
+
+<div class="card">
+
+<table class="education-table">
+
+<tr>
+<th>Qualification</th>
+<th>Institution</th>
+<th>Year</th>
+<th>Percentage/CGPA</th>
+</tr>
+
+<tr>
+<td>B.Tech</td>
+<td>Your College Name</td>
+<td>2023-2027</td>
+<td>8.5 CGPA</td>
+</tr>
+
+<tr>
+<td>Intermediate</td>
+<td>Your College</td>
+<td>2021-2023</td>
+<td>90%</td>
+</tr>
+
+<tr>
+<td>SSC</td>
+<td>Your School</td>
+<td>2021</td>
+<td>95%</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="card">
+
+<div class="skill">
+<div class="skill-name">HTML</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:95%"></div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-name">CSS</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:90%"></div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Java</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:92%"></div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Python</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:85%"></div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+<h3>Portfolio Website</h3>
+<p>Responsive portfolio built using HTML, CSS and JavaScript.</p>
+</div>
+
+<div class="project-card">
+<h3>Sensor Fusion Navigation System</h3>
+<p>Hackathon project for drone navigation and tracking.</p>
+</div>
+
+<div class="project-card">
+<h3>Student Management System</h3>
+<p>Java-based academic management application.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<div class="card">
+
+<form>
+
+<input type="text" placeholder="Enter Name" required>
+
+<input type="email" placeholder="Enter Email" required>
+
+<select>
+<option>B.Tech</option>
+<option>M.Tech</option>
+<option>BCA</option>
+</select>
+
+<textarea rows="5" placeholder="Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Chamala Anjali Reddy</h3>
+<p>Web Developer | Java Developer</p>
+<p>© 2026 All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>
